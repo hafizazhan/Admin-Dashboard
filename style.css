@@ -1,0 +1,340 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box
+}
+
+:root {
+    --main-colour: #1992d4;
+    --secondary-colour: #f0b429;
+    --background-colour: #e1e8f0;
+    --header-colour: #fff;
+    --card-colour: #fff;
+    --navlink-color: #fff;
+    font-family: "Roboto", sans-serif;
+}
+
+#dashboard-container {
+    display:grid;
+    grid-template-columns: 250px 1fr;
+    grid-template-rows: 150px 1fr;
+    height: 100vh;
+}
+
+#sidebar {
+    grid-row: 1 / 3;
+    grid-column: 1 / 1;
+    background-color: var(--main-colour);
+    display:grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 75px 2rem 300px 2rem 150px;
+}
+
+#logo {
+    grid-row: 1;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    align-items: center;
+}
+
+#nav-items {
+    grid-row: 3;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(6, 1fr);
+}
+
+#settings-items {
+    grid-row: 5;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, 1fr);
+    align-items: center;
+}
+
+#nav-items a,
+#settings-items a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    font-weight: bold;
+    color: var(--navlink-color);
+    padding: 0.5rem 1rem;
+}
+
+#logo a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    font-weight: bold;
+    color: var(--navlink-color);
+    padding: 0 0.5rem;
+    font-size: 1.5rem;
+}
+
+#nav-items img,
+#settings-items img {
+    height: 1.5rem;
+    margin-right: 1rem;
+    filter: invert(100%);
+}
+
+#logo img {
+    height: 2.5rem;
+    margin-right: 0.5rem;
+    filter: invert(100%);
+}
+
+#header {
+    grid-row: 1 / 2;
+    grid-column: 2 / 3;
+    background-color: var(--header-colour);
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+}
+
+#header img {
+    height: 2.5rem;
+}
+
+#utility-bar {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 1fr;
+    align-items: center;
+    padding: 0 2rem;
+}
+
+#nav-bar {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    align-items: center;
+    padding: 0 2rem;
+}
+
+#search-bar {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+#search-bar img {
+    height: 1.5rem;
+    margin-right: 1rem;
+}
+
+#search-bar div {
+    background-color: var(--background-colour);
+    height: 1.5rem;
+    width: 100%;
+    border: 0;
+    border-radius: 50px;
+}
+
+#user-controls {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+#user-controls > img:first-child {
+    height: 1.5rem;
+    margin-right: 1rem;
+}
+
+#user-data img {
+    height: 2.5rem;
+    margin-right: 1rem;
+}
+
+#user-data {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-weight: bold;
+}
+
+#user-details {
+    display: flex;
+    flex-direction: column;
+}
+
+#user-details > p:first-child {
+    font-size: 12px;
+    font-weight: bold;
+}
+
+#user-details > p:last-child {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+#user-contents {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+#user-content img {
+    height: 3.5rem;
+    margin-right: 1rem;
+}
+
+#button-options {
+    grid-column: 3 / 3;
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+}
+
+#button-options ul {
+    list-style-type: none;
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+}
+
+ul > li {
+    margin: 10px;
+    padding: 8px 10px;
+    background-color: var(--main-colour);
+    border-radius: 50px;
+    font-weight: bold;
+    text-align: center;
+    color: white;
+}
+
+#main {
+    grid-row: 2 / 3;
+    grid-column: 2 / 3;
+    background-color: var(--background-colour);
+    display: grid;
+    grid-template-columns: 5fr 2fr;
+    grid-template-rows: 50px 1fr calc(50px -1rem); 
+}
+
+#projects {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+    gap: 1rem;
+    padding: 0 1rem 1rem 1rem;
+}
+
+#project-title {
+    grid-row: 1 / 2;
+    grid-column: 1 / 2;
+    margin-top: auto;
+    padding: 0.5rem 1rem;
+    font-size: 20px;
+}
+
+#announcement-title {
+    grid-row: 1 / 2;
+    grid-column: 2 / 3;
+    margin-top: auto;
+    padding: 0.5rem 0;
+    font-size: 20px;
+}
+
+#more {
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1.5fr 50px 1.5fr;
+    padding: 0 1rem 1rem 0;
+}
+
+#trending-title {
+    grid-row: 2 / 3;
+    grid-column: 1 / 2;
+    margin-top: auto;
+    padding: 0.5rem 0;
+    font-size: 20px;
+}
+
+.card {
+    background-color: var(--card-colour);
+    border-radius: 0.5rem;
+}
+
+.project {
+    border-left: 8px solid var(--secondary-colour);
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+}
+
+.card-title {
+    height: 20%;
+    display: flex;
+    align-items: flex-end;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.card-info {
+    height: 60%;
+    display: flex;
+    font-size: 12px;
+    padding-top: 0.5rem;
+}
+
+.card-btns {
+    height: 20%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.card-btns img {
+    height: 1.5rem;
+    padding: 0 0.2rem;
+}
+
+.announcement {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr auto 1fr auto 1fr;
+    gap: 0.5rem;
+    font-size: 12px;
+    padding: 1rem;
+    justify-content: center;
+    background-color: var(--card-colour);
+}
+
+.announcement hr {
+    width: 100%;
+}
+
+.announcement p {
+    padding-top: 0.5rem;
+}
+
+.trending {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4, 1fr);
+    font-size: 12px;
+    padding: 1rem;
+    background-color: var(--card-colour);
+    align-items: center;
+}
+
+.user-info {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.user-info img {
+    height: 3rem;
+}
+
+.user-profile {
+    padding-left: 0.5rem;
+}
